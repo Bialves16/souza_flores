@@ -6,14 +6,14 @@ export default function HomePage() {
   return (
     <Shell>
       <main>
-        <section className="mx-auto max-w-7xl px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pb-16">
-          <div className="overflow-hidden rounded-[36px] border border-[#e9e1d7] bg-[#f4efe8] shadow-[0_30px_80px_rgba(34,26,18,0.06)]">
-            <div className="grid items-center gap-8 px-5 py-6 md:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-12 lg:py-8">
+        <section className="mx-auto flex min-h-[calc(100vh-50px)] max-w-7xl items-center px-4 pb-8 pt-4 sm:px-6 lg:px-8 lg:pb-10">
+          <div className="w-full overflow-hidden rounded-[36px] border border-[#e9e1d7] bg-[#f4efe8] shadow-[0_30px_80px_rgba(34,26,18,0.06)]">
+            <div className="grid items-center gap-6 px-5 py-5 md:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-10 lg:py-6">
               <div className="max-w-xl">
                 <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.34em] text-[#697a68]">
                   {brand.tagline}
                 </p>
-                <h1 className="font-editorial text-5xl leading-[0.9] text-[#1b261d] sm:text-6xl lg:text-7xl">
+                <h1 className="font-editorial text-4xl leading-[0.95] text-[#1b261d] sm:text-5xl lg:text-[4rem]">
                   Flores para dizer
                   <span className="block text-[#23472b]">o que palavras não conseguem.</span>
                 </h1>
@@ -26,19 +26,21 @@ export default function HomePage() {
                     href="/catalog"
                     className="inline-flex items-center justify-center rounded-full bg-[#1d3d28] px-6 py-3.5 text-sm font-medium text-white transition hover:bg-[#163122]"
                   >
-                    Escolher minhas flores
+                    Ver catálogo
                   </Link>
-                  <Link
-                    href="/catalog"
+                  <a
+                    href="https://wa.me/5575981074550"
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex items-center justify-center rounded-full border border-[#d6cdc0] bg-white px-6 py-3.5 text-sm font-medium text-[#1f3328] transition hover:border-[#9db09a]"
                   >
-                    Encontrar um presente
-                  </Link>
+                    Falar no WhatsApp
+                  </a>
                 </div>
 
-                <div className="mt-8 flex items-center gap-4 text-sm text-[#465745]">
+                <div className="mt-4 flex items-center gap-4 text-sm text-[#465745]">
                   <div className="flex items-center gap-2 rounded-full border border-[#d9d2c8] bg-white/70 px-3 py-2">
-                    <span className="inline-block h-2.5 w-2.5 rounded-full bg-[#7fa06e]" />
+                    <span className="inline-block h-2 w-2.5 rounded-full bg-[#7fa06e]" />
                     Feira de Santana • BA
                   </div>
                 </div>
@@ -50,7 +52,7 @@ export default function HomePage() {
                   <img
                     src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=1200&q=80"
                     alt="Buquê floral de rosas e flores naturais"
-                    className="h-[500px] w-full rounded-[26px] object-cover"
+                    className="h-[430px] w-full rounded-[26px] object-cover lg:h-[470px]"
                   />
                 </div>
                 <div className="absolute -bottom-4 left-5 rounded-[24px] border border-white/80 bg-white/80 px-4 py-3 shadow-[0_20px_40px_rgba(44,37,30,0.12)] backdrop-blur-sm">

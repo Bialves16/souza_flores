@@ -1,6 +1,5 @@
 export const brand = {
   name: "Souza Flores",
-  tagline: "Flores para todas as ocasiões",
   instagram: "@souzafloress",
   instagramUrl: "https://www.instagram.com/souzafloress/",
   phones: [
