@@ -1,5 +1,16 @@
-export const brand = {
+export type Brand = {
+  name: string;
+  tagline: string;
+  instagram: string;
+  instagramUrl: string;
+  phones: string[];
+  city: string;
+  state: string;
+};
+
+export const brand: Brand = {
   name: "Souza Flores",
+  tagline: "Flores para todas as ocasiões",
   instagram: "@souzafloress",
   instagramUrl: "https://www.instagram.com/souzafloress/",
   phones: [
