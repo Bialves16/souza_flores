@@ -77,44 +77,44 @@ export function ProductCard({
   accent: string;
 }) {
   return (
-    <article className="group overflow-hidden rounded-[30px] border border-[#ecdfd7] bg-white shadow-[0_20px_60px_rgba(34,33,31,0.05)] transition hover:-translate-y-1 hover:shadow-[0_28px_80px_rgba(34,33,31,0.08)]">
+    <article className="group overflow-hidden rounded-[26px] border border-[#ecdfd7] bg-white shadow-[0_16px_50px_rgba(34,33,31,0.04)] transition hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(34,33,31,0.08)]">
       <div className="relative overflow-hidden">
         <img
           src={image}
           alt={name}
-          className="h-80 w-full object-cover transition duration-500 group-hover:scale-105"
+          className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
         />
         <button
           type="button"
-          className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/80 bg-white/80 text-lg text-[#2d4134] shadow-sm backdrop-blur-sm"
+          className="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/80 bg-white/80 text-base text-[#2d4134] shadow-sm backdrop-blur-sm"
           aria-label={`Favoritar ${name}`}
         >
           ♡
         </button>
         <div
-          className="absolute inset-x-4 bottom-4 flex items-center justify-between rounded-full border border-white/70 bg-white/75 px-3 py-2 text-xs font-medium uppercase tracking-[0.22em] text-[#1d2a1e] backdrop-blur-sm"
+          className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-full border border-white/70 bg-white/75 px-2.5 py-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-[#1d2a1e] backdrop-blur-sm"
         >
           <span>{category}</span>
-          <span className={`inline-block h-2.5 w-2.5 rounded-full ${accentClass(accent)}`} />
+          <span className={`inline-block h-2 w-2 rounded-full ${accentClass(accent)}`} />
         </div>
       </div>
-      <div className="space-y-4 p-5">
+      <div className="space-y-3 p-4">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-xs uppercase tracking-[0.26em] text-[#7c8677]">{category}</p>
-            <h3 className="mt-2 font-serif text-3xl text-[#1c241d]">{name}</h3>
+            <p className="text-[10px] uppercase tracking-[0.22em] text-[#7c8677]">{category}</p>
+            <h3 className="mt-2 font-serif text-2xl leading-none text-[#1c241d]">{name}</h3>
           </div>
-          <span className="text-lg font-semibold text-[#1d2a1e]">{price}</span>
+          <span className="text-base font-semibold text-[#1d2a1e]">{price}</span>
         </div>
         <p className="text-sm leading-6 text-[#536154]">{description}</p>
-        <div className="flex items-center justify-between gap-3 pt-2">
+        <div className="flex items-center justify-between gap-3 pt-1">
           <Link
             href={href}
-            className="inline-flex items-center justify-center rounded-full bg-[#1d3d28] px-4 py-2.5 text-sm font-medium text-white transition hover:bg-[#163122]"
+            className="inline-flex items-center justify-center rounded-full bg-[#1d3d28] px-3.5 py-2 text-xs font-medium text-white transition hover:bg-[#163122]"
           >
             Ver presente
           </Link>
-          <button className="inline-flex items-center justify-center rounded-full border border-[#d3c8be] bg-[#fbf8f4] px-4 py-2.5 text-sm font-medium text-[#213626] transition hover:border-[#9caf9c]">
+          <button className="inline-flex items-center justify-center rounded-full border border-[#d3c8be] bg-[#fbf8f4] px-3.5 py-2 text-xs font-medium text-[#213626] transition hover:border-[#9caf9c]">
             + Adicionar
           </button>
         </div>

@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Souza Flores
 
-## Getting Started
+Loja online da Souza Flores, desenvolvida para conectar a presença da marca no Instagram com uma experiência de compra moderna, emocional e funcional.
 
-First, run the development server:
+## 🏡 Sobre o projeto
+
+Este projeto é uma storefront digital para a floricultura Souza Flores, com foco em:
+
+- descoberta por ocasião;
+- apresentação de produtos florais com apelo emocional;
+- catálogo e página de produto;
+- experiência de agendamento de presente diretamente no site;
+- identidade visual alinhada à marca e ao mercado local de Feira de Santana.
+
+## 🌸 Visão da marca
+
+A Souza Flores é uma floricultura local com forte presença emocional e comercial. A proposta do projeto foi criar uma loja online que pareça natural com a marca, sem perder a sensação de negócio real, humano e acolhedor.
+
+## 🚀 Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+
+## 🧩 Funcionalidades
+
+- Homepage com narrativa editorial e identidade visual da marca
+- Seção de ocasiões em carrossel horizontal
+- Catálogo de produtos
+- Página de produto
+- Fluxo de agendamento no próprio site
+- Estrutura pronta para expansão de checkout, pedidos e administração
+
+## 📁 Estrutura do projeto
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+app/
+  agendamento/
+  catalog/
+  produto/
+  components/
+  data/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ▶️ Como rodar localmente
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Abra no navegador:
 
-## Learn More
+```bash
+http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🧪 Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Deploy no Vercel
 
-## Deploy on Vercel
+Este projeto foi pensado para deploy imediato na Vercel.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Conecte o repositório no Vercel
+2. Selecione a pasta raiz do projeto
+3. Use as configurações padrão do Next.js
+4. Realize o deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📞 Dados reais usados
+
+- Souza Flores
+- Flores para todas as ocasiões
+- @souzafloress
+- (75) 98107-4550
+- (75) 98304-1250
+- (75) 98367-9515
+
+## 📌 Observação
+
+As informações que não estavam disponíveis no briefing foram deixadas em estrutura preparada para futura configuração administrativa, sem inventar dados comerciais.

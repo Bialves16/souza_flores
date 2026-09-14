@@ -69,29 +69,31 @@ export default function HomePage() {
             description="Escolha o que você quer dizer. A gente cuida das flores."
           />
 
-          <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {occasions.map((occasion, index) => (
-              <Link
-                key={occasion.id}
-                href={`/catalog?occasion=${occasion.id}`}
-                className="group overflow-hidden rounded-[28px] border border-[#eadfd5] bg-[#fffdfc] shadow-[0_20px_60px_rgba(32,28,22,0.04)] transition hover:-translate-y-1"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={occasion.image}
-                    alt={occasion.title}
-                    className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
-                    style={{ filter: index % 2 === 0 ? "saturate(1.05)" : "contrast(1.03)" }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1b221d]/55 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-                    <p className="text-[10px] uppercase tracking-[0.26em] text-[#eef3ee]">Ocasião</p>
-                    <h3 className="mt-2 font-serif text-4xl leading-none">{occasion.title}</h3>
+          <div className="mt-8 overflow-x-auto pb-3 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex min-w-max gap-5">
+              {occasions.map((occasion, index) => (
+                <Link
+                  key={occasion.id}
+                  href={`/catalog?occasion=${occasion.id}`}
+                  className="group block w-[280px] shrink-0 overflow-hidden rounded-[28px] border border-[#eadfd5] bg-[#fffdfc] shadow-[0_20px_60px_rgba(32,28,22,0.04)] transition hover:-translate-y-1 sm:w-[300px]"
+                >
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={occasion.image}
+                      alt={occasion.title}
+                      className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
+                      style={{ filter: index % 2 === 0 ? "saturate(1.05)" : "contrast(1.03)" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1b221d]/55 via-transparent to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
+                      <p className="text-[10px] uppercase tracking-[0.26em] text-[#eef3ee]">Ocasião</p>
+                      <h3 className="mt-2 font-serif text-4xl leading-none">{occasion.title}</h3>
+                    </div>
                   </div>
-                </div>
-                <div className="p-4 text-sm text-[#4f5a4d]">{occasion.description}</div>
-              </Link>
-            ))}
+                  <div className="p-4 text-sm text-[#4f5a4d]">{occasion.description}</div>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -197,6 +199,56 @@ export default function HomePage() {
                 <p className="mt-4 text-sm leading-7 text-[#4d5d4e]">{item.text}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="overflow-hidden rounded-[34px] border border-[#e7dacd] bg-[#1d3d28] p-6 text-white shadow-[0_30px_80px_rgba(22,42,26,0.12)] sm:p-8 lg:p-10">
+            <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-center">
+              <div>
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#dfead8]">Agendamento</p>
+                <h2 className="mt-4 font-serif text-5xl leading-none text-white sm:text-6xl">
+                  Seu presente pode ser agendado com a gente.
+                </h2>
+                <p className="mt-4 max-w-xl text-base leading-7 text-[#e4eee1]">
+                  Fale com a Souza Flores para escolher o momento ideal, personalizar o presente e confirmar a entrega com atenção.
+                </p>
+
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <Link
+                    href="/agendamento"
+                    className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3.5 text-sm font-medium text-[#173a25] transition hover:bg-[#f1f6ef]"
+                  >
+                    Agendar pelo site
+                  </Link>
+                  <a
+                    href={brand.instagramUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center rounded-full border border-white/30 bg-transparent px-5 py-3.5 text-sm font-medium text-white transition hover:border-white/60"
+                  >
+                    Conversar no Instagram
+                  </a>
+                </div>
+              </div>
+
+              <div className="rounded-[28px] border border-white/15 bg-white/6 p-5 backdrop-blur-sm">
+                <p className="text-[11px] uppercase tracking-[0.28em] text-[#d9e3d5]">Contatos</p>
+                <ul className="mt-5 space-y-3 text-sm text-[#eef5ee]">
+                  {brand.phones.map((phone) => (
+                    <li key={phone} className="rounded-full border border-white/15 bg-[#ffffff0a] px-4 py-3">
+                      <a href={`tel:${phone.replace(/[^\d+]/g, "")}`} className="hover:text-white">
+                        {phone}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-5 rounded-[20px] border border-white/15 bg-[#f3f7f0] p-4 text-[#173a25]">
+                  <p className="text-[10px] uppercase tracking-[0.24em] text-[#5c6f5d]">Instagram</p>
+                  <p className="mt-2 text-lg font-medium">{brand.instagram}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
