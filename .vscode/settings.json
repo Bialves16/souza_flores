@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd /d \"e:\\\\coisas bia\\\\trabalho\\\\aether\\\\clientes\\\\floricultura_souza_flores\\\\claude\" ; npx create-next-app@latest \\. --ts --app --eslint --use-npm --import-alias \"@/\\*\" --yes$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
