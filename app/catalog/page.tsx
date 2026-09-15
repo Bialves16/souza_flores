@@ -10,7 +10,7 @@ export default function CatalogPage() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-xs uppercase tracking-[0.28em] text-[#73886d]">Catálogo</p>
-              <h1 className="mt-3 font-serif text-5xl text-[#1d2a1e]">Flores para cada momento.</h1>
+              <h1 className="mt-3 font-serif text-4xl text-[#1d2a1e] sm:text-5xl">Flores para cada momento.</h1>
             </div>
             <div className="flex w-full max-w-xl items-center gap-3 rounded-full border border-[#d9d1c8] bg-[#f6f1ea] px-4 py-3">
               <span className="text-lg">⌕</span>

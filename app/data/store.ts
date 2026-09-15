@@ -142,8 +142,6 @@ export const instagramPosts = [
   "https://images.unsplash.com/photo-1468327768560-75b778cbb551?auto=format&fit=crop&w=900&q=80",
   "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
   "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1521146764736-56c929d59c83?auto=format&fit=crop&w=900&q=80",
 ];
 
 export const editorialHighlights = [

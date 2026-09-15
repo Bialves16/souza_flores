@@ -319,19 +319,31 @@ export function SectionHeading({
   title,
   description,
   align = "left",
+  theme = "light",
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
+  theme?: "light" | "dark";
 }) {
+  const isDark = theme === "dark";
+
   return (
     <div className={align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-xl"}>
       {eyebrow ? (
-        <p className="mb-3 text-xs font-medium uppercase tracking-[0.28em] text-[#6c7d68]">{eyebrow}</p>
+        <p className={`mb-3 text-xs font-medium uppercase tracking-[0.28em] ${isDark ? "text-[#dfead8]" : "text-[#6c7d68]"}`}>
+          {eyebrow}
+        </p>
       ) : null}
-      <h2 className="font-serif text-4xl leading-none text-[#1d2a1e] sm:text-5xl">{title}</h2>
-      {description ? <p className="mt-4 text-base leading-7 text-[#4d5b4e]">{description}</p> : null}
+      <h2 className={`font-serif text-3xl leading-none sm:text-5xl ${isDark ? "text-white" : "text-[#1d2a1e]"}`}>
+        {title}
+      </h2>
+      {description ? (
+        <p className={`mt-4 text-base leading-7 ${isDark ? "text-[#e4eee1]" : "text-[#4d5b4e]"}`}>
+          {description}
+        </p>
+      ) : null}
     </div>
   );
 }
@@ -354,7 +366,7 @@ export function ProductCard({
   accent: string;
 }) {
   return (
-    <article className="group overflow-hidden rounded-[26px] border border-[#ecdfd7] bg-white shadow-[0_16px_50px_rgba(34,33,31,0.04)] transition hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(34,33,31,0.08)]">
+    <article className="group mx-auto w-full max-w-[390px] overflow-hidden rounded-[26px] border border-[#ecdfd7] bg-white shadow-[0_16px_50px_rgba(34,33,31,0.04)] transition hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(34,33,31,0.08)] sm:max-w-none">
       <div className="relative overflow-hidden">
         <img
           src={image}
@@ -412,13 +424,23 @@ function accentClass(accent: string) {
   return colors[accent] ?? "bg-[#d5c7b7]";
 }
 
-export function InstagramTile({ src, alt }: { src: string; alt: string }) {
+export function InstagramTile({
+  src,
+  alt,
+  tall = false,
+}: {
+  src: string;
+  alt: string;
+  tall?: boolean;
+}) {
   return (
-    <div className="group overflow-hidden rounded-[24px] border border-[#e7ddd4] bg-[#f4efe9]">
+    <div className="group overflow-hidden rounded-[20px] border border-[#e7ddd4] bg-[#f4efe9] sm:rounded-[24px]">
       <img
         src={src}
         alt={alt}
-        className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+        className={`w-full object-cover transition duration-500 group-hover:scale-105 ${
+          tall ? "h-52 sm:h-64 lg:h-72" : "h-40 sm:h-52 lg:h-60"
+        }`}
       />
     </div>
   );
@@ -426,16 +448,16 @@ export function InstagramTile({ src, alt }: { src: string; alt: string }) {
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#e7dfd5] bg-[#f8f4ef]">
+    <footer className="border-t border-[#dfe7dc] bg-[#1d3d28] text-[#eef5ee]">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.5fr_1fr_1fr_1.5fr] lg:px-8">
         <div>
-          <p className="font-serif text-4xl text-[#1d2a1e]">Souza Flores</p>
-          <p className="mt-3 text-base text-[#58655b]">{brand.tagline}</p>
+          <p className="font-serif text-4xl text-white">Souza Flores</p>
+          <p className="mt-3 text-base text-[#dfead8]">{brand.tagline}</p>
         </div>
 
         <div>
-          <p className="text-xs uppercase tracking-[0.24em] text-[#6d7a6a]">Comprar</p>
-          <ul className="mt-4 space-y-3 text-sm text-[#3d463d]">
+          <p className="text-xs uppercase tracking-[0.24em] text-[#dfead8]">Comprar</p>
+          <ul className="mt-4 space-y-3 text-sm text-[#eef5ee]">
             <li><Link href="/catalog?category=buques">Buquês</Link></li>
             <li><Link href="/catalog?category=arranjos">Arranjos</Link></li>
             <li><Link href="/catalog?category=cestas">Cestas</Link></li>
@@ -444,8 +466,8 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs uppercase tracking-[0.24em] text-[#6d7a6a]">Ajuda</p>
-          <ul className="mt-4 space-y-3 text-sm text-[#3d463d]">
+          <p className="text-xs uppercase tracking-[0.24em] text-[#dfead8]">Ajuda</p>
+          <ul className="mt-4 space-y-3 text-sm text-[#eef5ee]">
             <li><Link href="/catalog">Pedidos</Link></li>
             <li><Link href="/catalog">Entrega</Link></li>
             <li><Link href="/catalog">Pagamento</Link></li>
@@ -454,8 +476,8 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs uppercase tracking-[0.24em] text-[#6d7a6a]">Contato</p>
-          <ul className="mt-4 space-y-3 text-sm text-[#3d463d]">
+          <p className="text-xs uppercase tracking-[0.24em] text-[#dfead8]">Contato</p>
+          <ul className="mt-4 space-y-3 text-sm text-[#eef5ee]">
             {brand.phones.map((phone) => (
               <li key={phone}>{phone}</li>
             ))}

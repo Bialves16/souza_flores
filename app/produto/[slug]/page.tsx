@@ -55,7 +55,7 @@ export default async function ProductDetailsPage({
 
           <div className="rounded-[30px] border border-[#ebdfd6] bg-[#fffdfb] p-6 shadow-[0_20px_60px_rgba(30,32,28,0.05)] sm:p-8">
             <p className="text-xs uppercase tracking-[0.28em] text-[#6f856f]">{product.category}</p>
-            <h1 className="mt-4 font-editorial text-5xl leading-none text-[#1d2a1e]">{product.name}</h1>
+            <h1 className="mt-4 font-editorial text-4xl leading-none text-[#1d2a1e] sm:text-5xl">{product.name}</h1>
             <p className="mt-4 text-3xl font-semibold text-[#1d2a1e]">{product.price}</p>
             <p className="mt-5 text-base leading-7 text-[#4d5b4e]">{product.description}</p>
 
